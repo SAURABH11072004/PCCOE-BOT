@@ -1,78 +1,75 @@
+/* Base CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+/* Chat Container */
 .chat-container {
-    width: 400px;
-    height: 600px;
+    width: 100%;
+    max-width: 400px;
     background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
+/* Chat Header */
 .chat-header {
-    background-color: #3f51b5;
-    color: white;
+    background-color: #3b5998;
+    padding: 20px;
     text-align: center;
-    padding: 20px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    color: white;
+}
+
+.chat-header h1 {
     font-size: 24px;
-    font-weight: 600;
+    margin: 0;
 }
 
+/* Chat Box */
 .chat-box {
-    padding: 20px;
+    padding: 15px;
+    height: 500px;
     overflow-y: auto;
-    flex-grow: 1;
 }
 
+/* Chat Input */
 .chat-input-container {
     display: flex;
     padding: 10px;
-    border-top: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
 }
 
 .chat-input {
-    width: calc(100% - 50px);
+    flex: 1;
     padding: 10px;
-    border-radius: 20px;
+    font-size: 16px;
     border: 1px solid #ccc;
-    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
 .send-btn {
-    background-color: #3f51b5;
-    border: none;
+    background-color: #3b5998;
     color: white;
+    border: none;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
-    margin-left: 10px;
 }
 
-.send-btn:hover {
-    background-color: #2c387e;
-}
-
-@media (max-width: 600px) {
-    .chat-container {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-    }
-
-    .chat-input-container {
-        padding: 5px;
-    }
+.send-btn i {
+    font-size: 18px;
 }
