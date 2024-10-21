@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCCOE BOT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #0056b3; /* PCCOE color */
+        }
+    </style>
+</head>
+<body>
+    <h1>PCCOE BOT</h1>
+    <p>Ask anything about PCCOE!</p>
+
+    <!-- Botpress Webchat will appear here -->
+    <div id="botpress-webchat"></div>
+
+    <!-- Botpress Webchat script -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script>
+        window.botpressWebChat.init({
+            botId: "pccoe-bot",
+            hostUrl: "https://cdn.botpress.cloud/webchat/v2.2",
+            configUrl: "https://files.bpcontent.cloud/2024/10/20/11/20241020114331-SFM7JAJU.json"
+        });
+    </script>
+</body>
+</html>
