@@ -1,24 +1,13 @@
-function sendMessage() {
-    const input = document.getElementById('chat-input').value;
-    const chatBox = document.getElementById('chat-box');
+// Example JavaScript file (app.js)
+window.addEventListener('load', function() {
+  window.botpressWebChat.init({
+    botId: 'pccoe-bot',
+    hostUrl: 'https://cdn.botpress.cloud/webchat/v2.2',
+    configUrl: 'https://files.bpcontent.cloud/2024/10/20/11/20241020114331-SFM7JAJU.json',
+  });
 
-    if(input.trim() === "") return;
-
-    // Append user message to chat box
-    const userMessage = document.createElement('div');
-    userMessage.className = 'user-message';
-    userMessage.textContent = "You: " + input;
-    chatBox.appendChild(userMessage);
-
-    // Placeholder for Botpress API response (integrate API later)
-    setTimeout(() => {
-        const botMessage = document.createElement('div');
-        botMessage.className = 'bot-message';
-        botMessage.textContent = "Bot: This is a placeholder for the Botpress API response.";
-        chatBox.appendChild(botMessage);
-    }, 1000);
-
-    // Clear input field and scroll chat box
-    document.getElementById('chat-input').value = '';
-    chatBox.scrollTop = chatBox.scrollHeight;
-}
+  // Optionally log when a message is sent
+  window.botpressWebChat.onEvent((event) => {
+    console.log('Botpress event:', event);
+  });
+});
