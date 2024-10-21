@@ -13,6 +13,79 @@
 
     <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Basic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Chat Container */
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Chat Header */
+        .chat-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .chat-header i {
+            margin-right: 10px;
+        }
+
+        /* Chat Box */
+        .chat-box {
+            padding: 20px;
+            height: 500px;
+            overflow-y: auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Hiding Botpress Branding */
+        .bpw-botpress-webchat-branding {
+            display: none !important;
+        }
+
+        /* Remove additional input box */
+        .chat-input-container {
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .chat-container {
+                width: 100%;
+                margin: 0;
+                border-radius: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Main Chat Container -->
@@ -27,20 +100,13 @@
             <!-- Botpress Webchat iframe -->
             <iframe 
                 src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/10/20/11/20241020114331-SFM7JAJU.json"
-                style="width: 100%; height: 500px; border: none;">
+                allow="microphone; geolocation" title="Chat Bot"
+                style="width: 100%; height: 100%; border: none;">
             </iframe>
-        </div>
-
-        <!-- Chat Input Section (Can be Linked for Custom Input Handling) -->
-        <div class="chat-input-container">
-            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message...">
-            <button class="send-btn">
-                <i class="fas fa-paper-plane"></i>
-            </button>
         </div>
     </div>
 
-    <!-- JavaScript file (for any custom JS handling you want to implement) -->
+    <!-- JavaScript file (for custom JS handling) -->
     <script src="app.js"></script>
 </body>
 </html>
